@@ -1,0 +1,28 @@
+api/ironday/routes.js
+  s_cd748a2ad745b6::t_c71b73555d4902 1-99,102-112
+  s_cd748a2ad745b6::t_fa6e8d3fcd3676 100-101
+api/ironday/llm.js
+  s_cd748a2ad745b6::t_6bd38f07668062 1-85
+IRONDAY.md
+  s_cd748a2ad745b6::t_c9be9eff1127be 1-40
+api/ironday/domain.js
+  s_cd748a2ad745b6::t_ad9c8d70a9bf74 1-113
+api/server.js
+  s_cd748a2ad745b6::t_fa6e8d3fcd3676 19,2579-2580
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.45-trip",
+  "base_commit_sha": "1b078c76938eac43cd59caba1af04fc938a39d17",
+  "prompts": {},
+  "sessions": {
+    "s_cd748a2ad745b6": {
+      "agent_id": {
+        "tool": "zcode",
+        "id": "sess_b7c4b5c7-20bf-4050-9ade-b43b4931c2ea",
+        "model": "GLM-5.3"
+      },
+      "human_author": "yuxuan.weng <wengyx@trip.com>"
+    }
+  }
+}
