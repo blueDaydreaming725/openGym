@@ -1,0 +1,180 @@
+@import '../../styles/tokens.scss';
+
+.index-page {
+  padding: $sp-3 $sp-3 $sp-5;
+  min-height: 100vh;
+}
+
+/* 进行中训练：渐变恢复横幅 */
+.resume-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: $grad-accent;
+  border-radius: $radius-md;
+  padding: $sp-2 $sp-3;
+  margin-bottom: $sp-3;
+  min-height: $tap-h;
+  box-shadow: $glow-accent;
+}
+.resume-title {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.resume-action {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* 今日训练 hero 卡 */
+.today-card {
+  padding: $sp-4;
+}
+.today-label {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+}
+.today-name {
+  display: block;
+  font-size: $fs-title;
+  font-weight: 700;
+  margin: $sp-2 0 $sp-3;
+}
+.today-empty {
+  color: $text-2;
+}
+.today-go {
+  margin-top: $sp-2;
+}
+.btn-primary-text {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* 周期进度：左文右环 */
+.cycle-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $sp-3;
+}
+.cycle-left {
+  flex: 1;
+}
+.cycle-line {
+  display: block;
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+.cycle-review-link {
+  display: block;
+  color: $info;
+  font-size: $fs-sub;
+  margin-top: $sp-2;
+  min-height: 56rpx;
+  line-height: 56rpx;
+}
+.ring-pct {
+  font-size: $fs-h2;
+  font-weight: 700;
+  color: $accent;
+}
+
+/* 今日热量：hero 数字 */
+.diet-row {
+  display: flex;
+  align-items: baseline;
+  gap: $sp-1;
+}
+.diet-num {
+  font-size: $fs-display;
+  font-weight: 700;
+}
+.diet-unit {
+  color: $text-2;
+  font-size: $fs-sub;
+}
+.diet-hint {
+  margin-left: auto;
+  color: $info;
+  font-size: $fs-sub;
+}
+
+/* 补剂打卡：pill 风格 */
+.supp-empty {
+  color: $text-2;
+}
+.supp-item {
+  display: inline-block;
+  margin: 0 $sp-2 $sp-2 0;
+  padding: 0 $sp-3;
+  min-height: 72rpx;
+  line-height: 72rpx;
+  border-radius: $radius-sm;
+  background-color: $surface-2;
+  color: $text;
+  font-size: $fs-sub;
+}
+.supp-item.done {
+  background-color: $accent-soft;
+  color: $accent;
+}
+
+/* 知识库入口 */
+.kb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: $tap-h;
+  padding: 0 $sp-2;
+  margin-top: $sp-2;
+}
+.kb-text {
+  color: $text-2;
+  font-size: $fs-body;
+}
+.kb-arrow {
+  color: $text-2;
+  font-size: $fs-h2;
+}
+
+/* 双周日历（7 列 × 2 行，iPhone 一屏排下） */
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8rpx;
+}
+.cal-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx 0;
+  border-radius: $radius-sm;
+  background-color: $surface-2;
+  min-height: 108rpx;
+  justify-content: space-between;
+}
+.cal-cell.done {
+  background-color: $accent-soft;
+}
+.cal-cell.today {
+  border: 2rpx solid $accent;
+}
+.cal-week {
+  color: $text-2;
+  font-size: $fs-mini;
+}
+.cal-day {
+  color: $text;
+  font-size: $fs-sub;
+  font-weight: 600;
+}
+.cal-label {
+  color: $text-2;
+  font-size: $fs-mini;
+}
+.cal-label.done {
+  color: $accent;
+  font-weight: 700;
+}

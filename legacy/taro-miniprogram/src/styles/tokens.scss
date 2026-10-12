@@ -1,0 +1,59 @@
+// ============================================================
+// 设计 tokens v2（深色运动风 · Keep 语言 + Hevy 数据呈现）
+// 参考：Keep = 黑灰深底 + 绿色点睛强对比；Apple HIG 活动环；
+//       暗色仪表盘实践（避免纯黑 / 去饱和强调 / 慷慨留白）
+// 750 设计稿，单位 rpx
+// ============================================================
+
+// ── 色彩：三层深灰（不用纯黑）+ 绿点睛 ──
+$bg: #0C1014;             // 页面底（比 v2 更深，让卡片浮起）
+$bg-glow: radial-gradient(1200rpx 500rpx at 50% -80rpx, rgba(108, 99, 255, 0.10), transparent 70%);
+$surface: #151B22;        // 卡片
+$surface-2: #1C242E;      // 次级面（输入/步进器）
+$border: #263140;         // 描边
+$text: #EAF0F6;           // 主文字
+$text-2: #93A1B0;         // 次级文字
+$accent: #6C7BFF;         // Keep 式品牌绿（微调更亮）
+$accent-deep: #14B877;
+$accent-press: #17A666;
+$accent-soft: rgba(43, 224, 126, 0.12);
+
+// ── 渐变（全 app 只允许这三处 + 进度环，克制）──
+$grad-accent: linear-gradient(135deg, #4E7CFE 0%, #9B5CF6 100%);  // 主按钮（蓝紫）
+$grad-hero: linear-gradient(150deg, rgba(43, 224, 126, 0.16) 0%, rgba(155, 92, 246, 0.05) 55%, transparent 100%); // hero 卡罩层
+$grad-rest: linear-gradient(90deg, #4E7CFE, #9B5CF6);             // 组间倒计时进度
+
+// ── 发光（带偏移与虚化，不是零偏移光晕）──
+$glow-accent: 0 12rpx 40rpx rgba(108, 99, 255, 0.35);
+$glow-soft: 0 6rpx 24rpx rgba(0, 0, 0, 0.35);
+
+// ── 语义色 ──
+$danger: #F86A5F;
+$warning: #E0A93C;
+$info: #5BB0FF;
+$gold: #F5C542;           // PR / 里程碑庆祝
+
+// ── 字号（rpx）──
+$fs-hero: 88rpx;     // hero 数字（重量/大进度）
+$fs-display: 64rpx;  // 计时/概览数字
+$fs-title: 40rpx;
+$fs-h2: 34rpx;
+$fs-body: 28rpx;
+$fs-sub: 24rpx;
+$fs-mini: 20rpx;
+
+// ── 间距（更慷慨）──
+$sp-1: 8rpx;
+$sp-2: 16rpx;
+$sp-3: 24rpx;
+$sp-4: 32rpx;
+$sp-5: 48rpx;
+
+// ── 圆角 ──
+$radius-sm: 14rpx;
+$radius-md: 24rpx;
+$radius-lg: 32rpx;
+
+// ── 触控目标 ──
+$tap-h: 88rpx;
+$tap-h-lg: 108rpx;

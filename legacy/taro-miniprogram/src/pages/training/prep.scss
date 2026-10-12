@@ -1,0 +1,158 @@
+@import '../../styles/tokens.scss';
+
+.prep-page {
+  padding: $sp-3 $sp-3 220rpx;
+  min-height: 100vh;
+}
+
+.page-sub {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  margin: $sp-1 0 $sp-3;
+}
+
+/* 动作条目 */
+.prep-item {
+  padding: $sp-3;
+}
+.item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-name {
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+.item-remove {
+  color: $danger;
+  font-size: $fs-sub;
+  padding: $sp-1 $sp-2;
+}
+.item-replaced {
+  display: block;
+  color: $text-2;
+  font-size: $fs-mini;
+  margin-top: $sp-1;
+}
+
+/* 动作要点：深一层面板 */
+.item-cues {
+  margin-top: $sp-2;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  padding: $sp-2;
+}
+.cue-line {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  line-height: 1.7;
+}
+
+/* 步进器：中央数值加大加粗 */
+.item-ctrl {
+  display: flex;
+  gap: $sp-3;
+  margin-top: $sp-2;
+  flex-wrap: wrap;
+}
+.stepper {
+  display: flex;
+  align-items: center;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  overflow: hidden;
+}
+.step-btn {
+  min-width: 76rpx;
+  min-height: 76rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $accent;
+  font-size: $fs-h2;
+  font-weight: 700;
+  background-color: $surface-2;
+}
+.step-btn:active {
+  background-color: $border;
+}
+.step-value {
+  min-width: 132rpx;
+  text-align: center;
+  color: $text;
+  font-size: $fs-body;
+  font-weight: 600;
+}
+
+/* 换动作入口 */
+.item-swap {
+  display: block;
+  color: $info;
+  font-size: $fs-sub;
+  margin-top: $sp-2;
+  min-height: 64rpx;
+  line-height: 64rpx;
+}
+
+/* 添加动作：虚线框 */
+.add-row {
+  min-height: $tap-h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx dashed $border;
+  border-radius: $radius-md;
+  margin-top: $sp-2;
+}
+.add-text {
+  color: $text-2;
+  font-size: $fs-body;
+}
+
+/* 底部开始栏：悬浮 + 毛玻璃感底 */
+.start-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: $sp-3;
+  padding-bottom: calc($sp-3 + env(safe-area-inset-bottom));
+  background-color: rgba(12, 16, 20, 0.92);
+}
+.btn-primary-text {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* 整组换课入口 */
+.swap-day-row {
+  min-height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(122, 108, 255, 0.12);
+  border-radius: $radius-md;
+  margin-bottom: $sp-3;
+}
+.swap-day-text {
+  color: #9B8CFF;
+  font-size: $fs-sub;
+  font-weight: 600;
+}
+
+/* 备注输入 */
+.note-row {
+  margin-top: $sp-2;
+}
+.note-input {
+  width: 100%;
+  min-height: 80rpx;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  padding: 0 $sp-3;
+  color: $text;
+  font-size: $fs-sub;
+}

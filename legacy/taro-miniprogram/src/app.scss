@@ -1,0 +1,134 @@
+@import './styles/tokens.scss';
+
+page {
+  background-color: $bg;
+  /* Keep 式宁静感：顶部一抹极淡的品牌光晕 */
+  background-image: $bg-glow;
+  background-repeat: no-repeat;
+  color: $text;
+  font-size: $fs-body;
+  line-height: 1.5;
+}
+
+/* H5 端没有 weapp 的 page 节点：body 必须同样吃深底与文字色，否则默认黑字不可见 */
+body,
+.taro_page {
+  background-color: $bg;
+  background-image: $bg-glow;
+  background-repeat: no-repeat;
+  color: $text;
+}
+
+view,
+text,
+input,
+button {
+  box-sizing: border-box;
+}
+
+/* 数字统一等宽对齐 */
+.num,
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 通用卡片：双层圆角 + 软阴影（带偏移，不是零偏移光晕） */
+.card {
+  background-color: $surface;
+  border-radius: $radius-md;
+  padding: $sp-3;
+  margin-bottom: $sp-3;
+  box-shadow: $glow-soft;
+}
+
+/* hero 卡：绿色渐变罩层 + 品牌描边（今日训练/进行中焦点） */
+.card-hero {
+  position: relative;
+  overflow: hidden;
+  border: 1rpx solid rgba(122, 108, 255, 0.5);
+}
+.card-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: $grad-hero;
+  pointer-events: none;
+}
+
+/* 主按钮：品牌渐变 + 发光 */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: $tap-h-lg;
+  background-image: $grad-accent;
+  box-shadow: $glow-accent;
+  border-radius: $radius-md;
+  font-size: $fs-h2;
+  font-weight: 700;
+}
+
+.btn-primary:active {
+  filter: brightness(0.92);
+}
+
+/* 次级按钮：描边幽灵 */
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: $tap-h;
+  background-color: rgba(28, 36, 46, 0.6);
+  border: 1rpx solid $border;
+  border-radius: $radius-md;
+  font-size: $fs-body;
+  color: $text;
+}
+
+/* 进度环（Apple 活动环语言：黑底、恒定品牌绿、恒定厚度）
+   用法：<View class="ring" style={{background: conic-gradient(...)}}>
+          <View class="ring-inner"><Text>60%</Text></View>
+        </View> */
+.ring {
+  width: 176rpx;
+  height: 176rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ring-inner {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+  background-color: $surface;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 页面标题区（层级：大标题紧贴内容，上方留白更慷慨） */
+.page-title {
+  display: block;
+  font-size: $fs-title;
+  font-weight: 700;
+  letter-spacing: 1rpx;
+}
+.sec-label {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  margin-bottom: $sp-2;
+}
+
+/* H5 原生表单元素默认白底修复（weapp 下该选择器不生效，无副作用） */
+input,
+textarea {
+  background-color: transparent;
+  color: $text;
+  caret-color: $accent;
+}
+input::placeholder,
+textarea::placeholder {
+  color: $text-2;
+}

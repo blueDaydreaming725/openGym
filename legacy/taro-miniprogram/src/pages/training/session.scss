@@ -1,0 +1,326 @@
+@import '../../styles/tokens.scss';
+
+.session-page {
+  padding: $sp-3 $sp-3 220rpx;
+  min-height: 100vh;
+}
+
+.loading-hint {
+  color: $text-2;
+  display: block;
+  padding: $sp-4 0;
+}
+
+/* 顶部：巨型计时 + 进度 */
+.top-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: $sp-3;
+}
+.elapsed {
+  font-size: $fs-display;
+  font-weight: 700;
+}
+.progress {
+  color: $text-2;
+  font-size: $fs-sub;
+}
+
+/* 组间倒计时：渐变进度填充 */
+.rest-bar {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  background-color: $surface-2;
+  border-radius: $radius-md;
+  padding: $sp-2 $sp-3;
+  margin-bottom: $sp-3;
+  min-height: $tap-h;
+}
+.rest-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-image: $grad-rest;
+  opacity: 0.22;
+  transition: width 1s linear;
+}
+.rest-label {
+  position: relative;
+  color: $accent;
+  font-size: $fs-body;
+  font-weight: 600;
+}
+.rest-time {
+  position: relative;
+  flex: 1;
+  color: $accent;
+  font-size: $fs-h2;
+  font-weight: 700;
+}
+.rest-btn {
+  position: relative;
+  color: $text;
+  font-size: $fs-body;
+  padding: 0 $sp-2;
+  min-height: 64rpx;
+  line-height: 64rpx;
+}
+
+/* 聚焦动作卡：hero 罩层 + 品牌描边 */
+.focus-card {
+  position: relative;
+  overflow: hidden;
+  background-color: $surface;
+  background-image: $grad-hero;
+  border: 1rpx solid rgba(43, 224, 126, 0.4);
+  border-radius: $radius-lg;
+  padding: $sp-4;
+  box-shadow: $glow-accent;
+}
+.focus-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ex-name {
+  font-size: $fs-title;
+  font-weight: 700;
+}
+.cues-toggle {
+  color: $info;
+  font-size: $fs-sub;
+  padding: $sp-1;
+}
+
+/* 要点提示 */
+.cues-block {
+  margin-top: $sp-2;
+  background-color: rgba(28, 36, 46, 0.85);
+  border-radius: $radius-sm;
+  padding: $sp-2;
+}
+.cue-line {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  line-height: 1.7;
+}
+
+/* 已完成组 */
+.sets-list {
+  margin-top: $sp-2;
+}
+.set-row {
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+  min-height: 68rpx;
+  border-bottom: 1rpx solid rgba(38, 49, 64, 0.6);
+}
+.set-no {
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $accent-soft;
+  color: $accent;
+  font-size: $fs-sub;
+  font-weight: 700;
+}
+.set-detail {
+  flex: 1;
+  color: $text;
+  font-weight: 600;
+}
+.set-rpe {
+  color: $text-2;
+  font-size: $fs-sub;
+}
+
+/* 当前组输入 */
+.input-block {
+  margin-top: $sp-3;
+}
+.weight-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $surface-2;
+  border-radius: $radius-md;
+  padding: $sp-2;
+}
+.wbtn {
+  min-width: 136rpx;
+  min-height: $tap-h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $surface;
+  color: $accent;
+  font-size: $fs-body;
+  font-weight: 700;
+  border-radius: $radius-sm;
+}
+.wbtn:active {
+  background-color: $border;
+}
+.weight {
+  color: $text;
+  font-size: $fs-hero;
+  font-weight: 700;
+  line-height: 1;
+}
+.unit {
+  font-size: $fs-body;
+  color: $text-2;
+  margin-left: $sp-1;
+  font-weight: 400;
+}
+.reps-row {
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+  margin-top: $sp-3;
+}
+.reps-label {
+  color: $text-2;
+  font-size: $fs-body;
+}
+.reps-input {
+  flex: 1;
+  min-height: $tap-h;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  padding: 0 $sp-3;
+  color: $text;
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+.rpe-row {
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  margin-top: $sp-3;
+}
+.rpe-label {
+  color: $text-2;
+  font-size: $fs-body;
+  margin-right: $sp-1;
+}
+.rpe-btn {
+  flex: 1;
+  min-height: $tap-h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  color: $text-2;
+  font-size: $fs-body;
+}
+.rpe-btn.active {
+  background-image: $grad-accent;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4rpx 16rpx rgba(122, 108, 255, 0.35);
+}
+
+/* 完成本组 */
+.complete-btn {
+  margin-top: $sp-3;
+}
+.complete-text {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: $fs-h2;
+}
+.goal-hint {
+  display: block;
+  color: $accent;
+  font-size: $fs-sub;
+  margin-top: $sp-2;
+}
+
+/* 动作级操作 */
+.ex-ops {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $sp-3;
+  border-top: 1rpx solid rgba(38, 49, 64, 0.6);
+  padding-top: $sp-2;
+}
+.op {
+  color: $text-2;
+  font-size: $fs-body;
+  min-height: $tap-h;
+  line-height: $tap-h;
+  padding: 0 $sp-1;
+}
+.op:active {
+  color: $text;
+}
+
+/* 添加动作 */
+.add-row {
+  min-height: $tap-h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx dashed $border;
+  border-radius: $radius-md;
+  margin-top: $sp-3;
+}
+.add-text {
+  color: $text-2;
+  font-size: $fs-body;
+}
+
+/* 结束训练：底部悬浮栏 */
+.finish-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: $sp-3;
+  padding-bottom: calc($sp-3 + env(safe-area-inset-bottom));
+  background-color: rgba(12, 16, 20, 0.92);
+}
+.finish-text {
+  color: $text;
+}
+
+/* 下一动作预览（一屏两动作） */
+.next-card {
+  margin-top: $sp-2;
+  background-color: rgba(28, 36, 46, 0.6);
+  border-radius: $radius-sm;
+  padding: $sp-2 $sp-3;
+  min-height: 88rpx;
+}
+.next-label {
+  display: block;
+  color: $text-2;
+  font-size: $fs-mini;
+}
+.next-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $sp-2;
+}
+.next-name {
+  color: $text;
+  font-size: $fs-body;
+  font-weight: 600;
+}
+.next-plan {
+  color: $text-2;
+  font-size: $fs-sub;
+}

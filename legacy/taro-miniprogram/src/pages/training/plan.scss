@@ -1,0 +1,128 @@
+@import '../../styles/tokens.scss';
+
+.plan-page {
+  padding: $sp-3 $sp-3 $sp-5;
+  min-height: 100vh;
+}
+
+.loading-hint {
+  color: $text-2;
+  display: block;
+  padding: $sp-4 0;
+}
+
+/* 进行中训练：渐变恢复横幅 */
+.resume-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: $grad-accent;
+  border-radius: $radius-md;
+  padding: $sp-2 $sp-3;
+  margin-bottom: $sp-3;
+  min-height: $tap-h;
+  box-shadow: $glow-accent;
+}
+.resume-title {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.resume-action {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* 今日训练 hero 卡 */
+.today-card {
+  padding: $sp-4;
+}
+.today-label {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+}
+.today-name {
+  display: block;
+  font-size: $fs-title;
+  font-weight: 700;
+  margin: $sp-2 0 $sp-3;
+}
+.today-cta {
+  display: block;
+  color: $accent;
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+
+/* 空态 */
+.empty-block {
+  padding: $sp-4 0;
+}
+.empty-title {
+  display: block;
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+.empty-sub {
+  display: block;
+  color: $text-2;
+  margin-top: $sp-1;
+}
+
+/* 计划卡 */
+.plan-name {
+  display: block;
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+.plan-meta {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  margin: $sp-1 0 $sp-2;
+}
+.plan-workout-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: $tap-h;
+  border-top: 1rpx solid $border;
+  color: $text;
+  font-size: $fs-body;
+}
+.plan-workout-row::after {
+  content: '›';
+  color: $text-2;
+  font-size: $fs-h2;
+}
+
+/* 模板创建区 */
+.template-block {
+  margin-top: $sp-4;
+}
+.block-title {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  margin-bottom: $sp-2;
+}
+.tpl-row {
+  display: block;
+  min-height: $tap-h;
+  line-height: $tap-h;
+  background-color: $surface;
+  border-radius: $radius-md;
+  padding: 0 $sp-3;
+  margin-bottom: $sp-2;
+  color: $text;
+  font-size: $fs-body;
+  box-shadow: $glow-soft;
+}
+.tpl-row:active {
+  background-color: $surface-2;
+}
+.tpl-row.claw {
+  border: 1rpx solid rgba(122, 108, 255, 0.5);
+  color: $accent;
+  font-weight: 600;
+}

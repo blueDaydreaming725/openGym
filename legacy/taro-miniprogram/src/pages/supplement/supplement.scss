@@ -1,0 +1,320 @@
+@import '../../styles/tokens.scss';
+
+.supplement-page {
+  padding: $sp-3 $sp-3 $sp-5;
+  min-height: 100vh;
+}
+
+.empty-card .empty-title {
+  display: block;
+  font-size: $fs-h2;
+  font-weight: 600;
+  margin-bottom: $sp-1;
+}
+.empty-card .empty-sub {
+  display: block;
+  color: $text-2;
+  line-height: 1.7;
+}
+
+/* 补剂计划卡 */
+.plan-name {
+  display: block;
+  font-size: $fs-h2;
+  font-weight: 600;
+  margin-bottom: $sp-1;
+}
+.supp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72rpx;
+  border-top: 1rpx solid rgba(38, 49, 64, 0.6);
+}
+.supp-name {
+  color: $text;
+}
+.supp-dose {
+  color: $text-2;
+  font-size: $fs-sub;
+}
+
+/* ── M2：体检指标 + AI 推荐 ── */
+.sec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $sp-1;
+}
+.sec-action {
+  color: $info;
+  font-size: $fs-sub;
+  min-height: 56rpx;
+  line-height: 56rpx;
+}
+.empty-line {
+  color: $text-2;
+  font-size: $fs-sub;
+}
+.metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $sp-2;
+  min-height: 68rpx;
+  border-top: 1rpx solid rgba(38, 49, 64, 0.6);
+}
+.metric-name {
+  flex: 1;
+  color: $text;
+}
+.metric-val {
+  font-size: $fs-sub;
+}
+.flag-normal {
+  color: $text-2;
+}
+.flag-low {
+  color: $info;
+}
+.flag-high {
+  color: $warning;
+}
+.flag-critical {
+  color: $danger;
+  font-weight: 700;
+}
+.metric-del {
+  color: $danger;
+  font-size: $fs-h2;
+  padding: 0 $sp-1;
+}
+.metric-form {
+  display: flex;
+  align-items: center;
+  gap: $sp-1;
+  margin-top: $sp-2;
+  flex-wrap: wrap;
+}
+.form-field {
+  display: block;
+  min-height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 $sp-2;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  color: $text;
+  font-size: $fs-sub;
+}
+.form-value {
+  width: 140rpx;
+  min-height: 72rpx;
+  background-color: $surface-2;
+  border-radius: $radius-sm;
+  padding: 0 $sp-2;
+  color: $text;
+}
+.form-save {
+  color: $accent;
+  font-weight: 700;
+  min-height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 $sp-2;
+}
+.rec-btn {
+  margin-bottom: $sp-3;
+}
+.rec-source {
+  margin-bottom: $sp-1;
+}
+.rec-src-tag {
+  font-size: $fs-mini;
+  color: #FFFFFF;
+  background-image: $grad-accent;
+  border-radius: $radius-sm;
+  padding: 4rpx 14rpx;
+  font-weight: 700;
+}
+.rec-summary {
+  display: block;
+  color: $text;
+  line-height: 1.7;
+  margin-bottom: $sp-2;
+}
+.rec-item {
+  padding: $sp-2 0;
+  border-top: 1rpx solid rgba(38, 49, 64, 0.6);
+}
+.rec-item-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: $sp-2;
+}
+.rec-name {
+  font-size: $fs-h2;
+  font-weight: 600;
+}
+.rec-dose {
+  color: $accent;
+  font-weight: 600;
+}
+.rec-timing {
+  display: block;
+  color: $text-2;
+  font-size: $fs-sub;
+  margin-top: 4rpx;
+}
+.rec-reason {
+  display: block;
+  color: $text-2;
+  font-size: $fs-mini;
+  line-height: 1.6;
+  margin-top: 4rpx;
+}
+.rec-warn {
+  display: block;
+  color: $warning;
+  font-size: $fs-sub;
+  margin-top: $sp-1;
+}
+.rec-disclaimer {
+  display: block;
+  color: $text-2;
+  font-size: $fs-mini;
+  line-height: 1.6;
+  margin-top: $sp-2;
+  padding-top: $sp-2;
+  border-top: 1rpx solid rgba(38, 49, 64, 0.6);
+}
+.adopt-btn {
+  margin-top: $sp-2;
+}
+.adopted-hint {
+  display: block;
+  color: $accent;
+  margin-top: $sp-2;
+}
+
+/* ── M2：体检报告批量解析 ── */
+.parse-block {
+  margin-top: $sp-2;
+}
+.report-input {
+  width: 100%;
+  min-height: 140rpx;
+  background-color: $surface-2 !important;
+  border-radius: $radius-sm;
+  padding: $sp-2;
+  color: $text !important;
+  font-size: $fs-sub;
+  box-sizing: border-box;
+}
+.parse-actions {
+  display: flex;
+  gap: $sp-2;
+  margin-top: $sp-2;
+}
+.parse-btn {
+  flex: 1;
+  min-height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $info;
+  font-size: $fs-sub;
+}
+.parse-error {
+  display: block;
+  color: $danger;
+  font-size: $fs-sub;
+  margin-top: $sp-2;
+}
+.parsed-block {
+  margin-top: $sp-2;
+}
+.parsed-title {
+  display: block;
+  color: $accent;
+  font-size: $fs-sub;
+  margin-bottom: $sp-1;
+}
+.metric-flag {
+  font-size: $fs-sub;
+  padding: 8rpx 16rpx;
+  border-radius: $radius-sm;
+  background-color: $surface-2;
+  min-height: 56rpx;
+  line-height: 44rpx;
+  display: block;
+}
+.save-parsed {
+  margin-top: $sp-2;
+}
+
+/* ── M2：AI 营养师对话 ── */
+.chat-card {
+  padding-bottom: $sp-3;
+}
+.chat-empty {
+  display: block;
+  color: $text-2;
+  line-height: 1.7;
+}
+.bubble {
+  max-width: 86%;
+  margin-bottom: $sp-2;
+  padding: $sp-2 $sp-3;
+  border-radius: $radius-md;
+  font-size: $fs-sub;
+  line-height: 1.7;
+}
+.bubble.user {
+  margin-left: auto;
+  background-image: $grad-accent;
+  color: #FFFFFF;
+}
+.bubble.assistant {
+  background-color: $surface-2;
+  color: $text;
+}
+.adopt-btn {
+  margin-top: $sp-2;
+  min-height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid $accent;
+  border-radius: $radius-sm;
+}
+.adopt-text {
+  color: $accent;
+  font-size: $fs-sub;
+}
+.chat-input-row {
+  display: flex;
+  gap: $sp-2;
+  margin-top: $sp-2;
+}
+.chat-input {
+  flex: 1;
+  min-height: $tap-h;
+  background-color: $surface-2;
+  border-radius: $radius-md;
+  padding: 0 $sp-3;
+  color: $text;
+  font-size: $fs-body;
+}
+.chat-send {
+  min-width: 120rpx;
+  min-height: $tap-h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: $grad-accent;
+  border-radius: $radius-md;
+}
+.chat-send-text {
+  color: #FFFFFF;
+  font-weight: 700;
+}
